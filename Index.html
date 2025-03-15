@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Open AirDroid</title>
+    <script>
+        function openApp() {
+            window.location.href = "intent://wxapi.WXEntryActivity#Intent;scheme=airdroid;package=com.sand.airdroid;end;";
+
+            // Fallback to Play Store if app is not installed
+            setTimeout(function() {
+                window.location.href = "https://play.google.com/store/apps/details?id=com.sand.airdroid";
+            }, 3000);
+        }
+    </script>
+</head>
+<body onload="openApp()">
+    <h1>Redirecting to AirDroid...</h1>
+</body>
+</html>
